@@ -17,7 +17,6 @@ body {
 nav a {
   padding: 12px;
   color: #fff;
-  margin-bottom: 30px;
   text-decoration: none;
   background-color: #4a90e2; 
   min-width: 50px;
@@ -29,10 +28,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-.content-container {
-  display: grid;
-}
-
 .right-container {
   position: absolute;
   top: 50%;
@@ -42,16 +37,18 @@ nav a:hover {
 
 .container {
   display: grid;
-  grid-auto-flow: row;
+  grid-template-columns: auto ;
 }
 
 .left-container {
   display: grid;
+  grid-template-columns: auto auto auto auto;
   height: 100vh;
 }
 
 nav {
   display: grid;
+  gap: 30px;
   position: absolute;
   top: 50%;
   transform: translate(0%,-50%);
@@ -76,11 +73,7 @@ nav {
   color: white;
 }
 
-.image {
-  place-self: center;
-}
 .card {
-  display: grid;
   margin-top: 20px;
   background-color: #fff; 
   box-shadow: 0 0 20px rgba(18, 81, 241, 0.1); 
@@ -138,12 +131,17 @@ footer p:not(:last-child) {
     transform: none;
   }
 
-  .right-container {
+  .card {
     display: grid;
+  }
+
+  .image {
+    place-self: center;
   }
 
   .left-container {
     height: auto;
+    grid-template-columns: auto;
   }
   
   .content-container {
@@ -152,6 +150,7 @@ footer p:not(:last-child) {
 
   nav {
     margin-top: 10px;
+    gap: 0;
   }
 
   nav a {
@@ -163,5 +162,3 @@ footer p:not(:last-child) {
     margin-left: 20px;
   }
 }
-
-
